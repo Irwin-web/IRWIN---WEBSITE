@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Irwin Abaho Itungo's Personal Profile Website</title>
 
@@ -46,7 +46,7 @@
        }
        
        #main-like-button {
-            font-size:20px
+            font-size:20px;
             padding: 10px 20px;
             background-color:#ff4d4d;
             color:white;
@@ -65,7 +65,7 @@
      padding:4px 8px;
      background-color:#eee;
      border:none;
-     cursor:pionter;
+     cursor:pointer;
      border-radius: 5px;       
     }
 
@@ -97,7 +97,7 @@
             <form id="contact-form">
                 <label for="name">Name:</label><br>
 
-                <input type="text" id="name"name="name" required<br><br>
+                <input type="text" id="name"name="name" required><br><br>
 
                 <label for="email">Email:</label><br>
 
@@ -140,7 +140,7 @@
                  <div id="comments-section">
                    <h4>Comments:</h4>
                    <ul id="comment-list"></ul>
-                 <div>
+                 </div>
 
                  </section>
                 
@@ -148,14 +148,14 @@
                  // Contact Form
                  document.getElementById('contact-form').addEventListener('submit',function(event) {
                  event.preventDefault();
-                 alert('Thank you for the your message!');  
-                 document.getElementBYId('contact-form').reset();
+                 alert('Thank you for your message!');  
+                 document.getElementById('contact-form').reset();
                  });
 
                  // Main Like Button
                  document.getElementById('main-like-button').addEventListener('click',function() {
                  const likeCount = document.getElementById('main-like-count');
-                 likeCount.textContent = parslent(likeCount.textContent)+1;
+                 likeCount.textContent = parseInt(likeCount.textContent)+1;
                  });
                  
                  // Comment Form (no like button per comment)
@@ -178,9 +178,9 @@
                  document.getElementById('comment-form').reset();
                      // Update comment counter
                      const commentCount =document.getElementById('comment-count');
-                     commentCount.textContent =parslent(commentCount.textContent) +1;
+                     commentCount.textContent =parseInt(commentCount.textContent) +1;
                  });
-                 
+                  
                  </script>
 
                  </body>
